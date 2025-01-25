@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home </title>
+    <style>
+        body {
+            margin: 0 0;
+            padding: 0 0;
+            background-color: black;
+            color: white;
+            font-family: Herculanum;
+        }
+
+        nav {
+            position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 0vw 3vw;
+        }
+
+        .logo {
+            position: relative;
+        }
+
+        .logo img {
+            width: 10vw;
+        }
+
+        nav ul {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 3vw;
+        }
+
+        nav ul li {
+            position: relative;
+            list-style: none;
+        }
+
+        nav ul li a {
+            font-size: 1.2vw;
+            text-decoration: none;
+            color: white;
+
+        }
+
+        nav ul p a {
+            position: relative;
+            border: 2px solid white;
+            text-decoration: none;
+            color: white;
+            font-size: 1.2vw;
+            padding: 0.3vw 0.9vw;
+            border-radius: 0.9vw;
+            background: linear-gradient(to right, black 50%, white 50%);
+            background-size: 200% 100%;
+            transition: background-position 0.5s, color 0.5s;
+        }
+
+        nav ul p a:hover {
+            background-position: -100% 0;
+            color: black;
+        }
+
+        .banner {
+            position: relative;
+
+        }
+
+        .banner img {
+            position: relative;
+        }
+
+        .bannertxt {
+            font-size: 1.4vw;
+            position: absolute;
+            margin: -27vw 24vw;
+        }
+
+        .bannertxt h1 {
+            font-size: 3.8vw;
+
+        }
+
+        .bannertxt h2 {
+            font-size: 1.4vw
+        }
+
+        .rooms {
+            position: relative;
+            text-align: center;
+            padding: 5vw 0;
+        }
+
+        .rooms h1 {
+            font-size: 2vw;
+            font-family: kokonor;
+        }
+
+        .rooms p {
+            font-size: 1.0vw;
+            font-family: 'Courier New', Courier, monospace;
+            padding: 0.7vw 0 1.3vw 0;
+        }
+
+        .rooms a {
+            font-size: 1.5vw;
+            border: 2px solid white;
+            text-decoration: none;
+            color: white;
+            padding: 0.3vw 0.9vw;
+            border-radius: 0.9vw;
+            background: linear-gradient(to right, black 50%, white 50%);
+            background-size: 200% 100%;
+            transition: background-position 0.5s, color 0.5s;
+        }
+
+        .rooms a:hover {
+            background-position: -100% 0;
+            color: black;
+        }
+
+        .demo {
+            position: relative;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .kamra {
+            position: relative;
+            text-align: center;
+        }
+
+        .kamra img {
+            border: 2px solid white;
+            border-radius: 0.3vw;
+            width: 31vw;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .kamra img:hover {
+            transform: scale(1.04);
+        }
+
+        .kamra h1 {
+            position: relative;
+            margin: -3vw 0 2.3vw;
+            font-family: Baskerville;
+            font-weight: normal;
+            background-color: rgba(0, 0, 0, 0.4);
+            border-radius: 0.5vw;
+        }
+
+        .kamra a {
+            border: 2px solid white;
+            text-decoration: none;
+            color: white;
+            font-size: 1.1vw;
+            padding: 0.3vw 0.9vw;
+            border-radius: 0.9vw;
+            background: linear-gradient(to right, black 50%, white 50%);
+            background-size: 200% 100%;
+            transition: background-position 0.5s, color 0.5s;
+        }
+
+        .kamra a:hover {
+            background-position: -100% 0;
+            color: black;
+        }
+
+        .about {
+            position: relative;
+            margin: 7vw 0;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center
+        }
+
+        .abouttxt {
+            position: relative;
+            margin: -44vw 0vw 0 0;
+            background-color: rgba(0, 0, 0, 0.4);
+            padding: 15vw 30vw 15vw 30vw;
+            font-family: Arial Black;
+        }
+
+        .about h1 {
+            font-size: 2.3vw;
+        }
+
+        .about h2 {
+            font-size: 1vw;
+            font-weight: normal;
+        }
+
+        .abouttxt a {
+            border: 2px solid white;
+            text-decoration: none;
+            color: white;
+            font-size: 1.1vw;
+            padding: 0.3vw 0.9vw;
+            border-radius: 0.9vw;
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.5) 50%, white 50%);
+            background-size: 200% 100%;
+            transition: background-position 0.5s, color 0.5s;
+        }
+
+        .abouttxt a:hover {
+            background-position: -100% 0;
+            color: black;
+        }
+
+        .connect {
+            position: relative;
+            text-align: center;
+            font-size: 4vw;
+            margin: 3vw 0;
+            font-family: Herculanum;
+        }
+
+        .contactus {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 3vw;
+            margin: 3vw 0;
+        }
+
+        .contactus img {
+            width: 28vw;
+            border: 2px solid white;
+            border-radius: 0.5vw;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .contact {
+            font-size: 1vw;
+            color: white;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .contact label {
+            font-size: 1.9vw;
+            margin: 1vw 0 0.5vw;
+        }
+
+        .contact input {
+            width: 80%;
+            font-size: 1vw;
+            padding: 0.7vw;
+            border: 2px solid white;
+            border-radius: 0.5vw;
+            background-color: black;
+            color: white;
+            margin-bottom: 1.5vw;
+            text-align: center;
+           
+        }
+
+        .contact input::placeholder {
+            color: rgba(255, 255, 255, 0.7);
+        }
+
+        .contact button {
+            font-size: 1.2vw;
+            padding: 0.7vw 1.5vw;
+            border: 2px solid white;
+            border-radius: 0.5vw;
+            background: linear-gradient(to right, black 50%, white 50%);
+            color: white;
+            cursor: pointer;
+            transition: background-position 0.5s, color 0.5s;
+            background-size: 200% 100%;
+            margin-top: 1vw;
+        
+        }
+
+        .contact button:hover {
+            background-position: -100% 0;
+            color: black;
+        }
+
+        .contact p {
+            margin-top: 2vw;
+            font-size: 1vw;
+            line-height: 1.7;
+           
+        }
+        .footer{
+            position: relative;
+            display: flex;
+            margin: 7vw 0 1vw 0;
+            justify-content: center;
+            gap: 4vw;
+            border-top: 2px solid white;
+            padding: 1.5vw 0 0 0;
+        }
+        .footer img{
+            height: 2vw;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <ul>
+            <li><a href="">Home</a></li>
+            <li><a href="">Rooms</a> </li>
+            <li><a href="">About us</a> </li>
+            <p><a href=""> Get in Touch</a></p>
+        </ul>
+
+    </nav>
+    <div class="banner">
+
+        <img src="banner.jpg" alt="">
+        <div class="bannertxt">
+            <h1>Welcome to <br> Winterfell Retreat</h1>
+            <h2>Your very own home in the mountains.</h2>
+        </div>
+    </div>
+    <div class="rooms">
+        <h1>ROOMS & SUITES</h1>
+        <p>Whether you’re travelling alone or with company, we have rooms that will fulfil everyone's needs. <br> All
+            rooms
+            are equipped with the necessary amenities, <br> and the decor simply speaks for itself. Check out our rooms
+            below.</p>
+        <a href="">View Rooms</a>
+    </div>
+    <div class="demo">
+        <div class="kamra">
+            <img src="room1.avif" alt="">
+            <h1>Luxury Room</h1>
+            <a href="">Gallery</a>
+        </div>
+        <div class="kamra">
+            <img src="room2.avif" alt="">
+            <h1>Premium Room</h1>
+            <a href="">Gallery</a>
+        </div>
+        <div class="kamra">
+            <img src="room3.avif" alt="">
+            <h1>Family Suite</h1>
+            <a href="">Gallery</a>
+        </div>
+    </div>
+    <div class="about">
+        <img src="About.avif" alt="">
+        <div class="abouttxt">
+            <h1>About Winterfell Retreat</h1>
+            <h2>Perched in the serene beauty of Hamta and Sethan, Winterfell Retreat is surrounded by majestic snowy
+                peaks
+                and pristine nature. <br>
+                Whether you seek adventure, stunning views, or a peaceful getaway, our retreat is the perfect Himalayan
+                escape. <br>
+                Come experience tranquility like never before and reconnect with nature in its purest form.</h2>
+            <a href="">Learn More</a>
+        </div>
+    </div>
+    <div class="connect">
+        Contact us
+        <div class="contactus">
+            <img src="contact.jpeg" alt="">
+            <div class="contact">
+                <form action="send_email.php" method="POST">
+                    <label for="name">Your Name</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your name" required>
+                    <br>
+                    <label for="number">Phone Number</label>
+                    <input type="text" id="number" name="number" placeholder="Enter your Phone Number" required>
+                    <br>
+                    <button type="submit">Get a Call Back</button>
+                </form>
+                <p>Our friendly staff will be happy to assist you with any questions or concerns.
+                    <br>
+                    ADHPL Barrier Hamta Road, Prini, Manali, Himachal Pradesh 175143, India <br>
+                    retreatwinterfell@gmail.com
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+       <a href=""> <img src="facebook.png" alt=""></a> 
+       <a href=""><img src="instagram.png" alt=""></a> 
+       <a href=""><img src="youtube.png" alt=""></a> 
+    </div>
+    
+
+    </div>
+</body>
+
+</html>
