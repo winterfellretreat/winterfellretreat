@@ -72,6 +72,10 @@
 
         }
 
+        .phonebanner {
+            display: none;
+        }
+
         .banner img {
             position: relative;
         }
@@ -180,9 +184,13 @@
             text-align: center
         }
 
+        .aboutphone {
+            display: none;
+        }
+
         .abouttxt {
             position: relative;
-            margin: -44vw 0vw 0 0;
+            margin: -46vw 0vw 0 0;
             background-color: rgba(0, 0, 0, 0.4);
             padding: 15vw 30vw 15vw 30vw;
             font-family: Arial Black;
@@ -249,6 +257,10 @@
             align-items: center;
             justify-content: center;
         }
+        .contact form{
+            border: 2px solid white;
+            padding: 1vw 0;
+        }
 
         .contact label {
             font-size: 1.9vw;
@@ -265,7 +277,7 @@
             color: white;
             margin-bottom: 1.5vw;
             text-align: center;
-           
+
         }
 
         .contact input::placeholder {
@@ -283,7 +295,7 @@
             transition: background-position 0.5s, color 0.5s;
             background-size: 200% 100%;
             margin-top: 1vw;
-        
+
         }
 
         .contact button:hover {
@@ -295,9 +307,10 @@
             margin-top: 2vw;
             font-size: 1vw;
             line-height: 1.7;
-           
+
         }
-        .footer{
+
+        .footer {
             position: relative;
             display: flex;
             margin: 7vw 0 1vw 0;
@@ -306,8 +319,176 @@
             border-top: 2px solid white;
             padding: 1.5vw 0 0 0;
         }
-        .footer img{
+
+        .footer img {
             height: 2vw;
+        }
+
+        @media (max-width: 650px) {
+            .logo img {
+                width: 20vw;
+            }
+
+            nav ul li a {
+                font-size: 2.3vw;
+            }
+
+            nav ul p a {
+                font-size: 2.8vw;
+            }
+
+            .banner img {
+                width: 97vw;
+            }
+
+            .pcbanner {
+                display: none;
+            }
+
+            .phonebanner {
+                display: block;
+            }
+
+            .bannertxt {
+                margin: -27vw 0vw 0 2vw;
+            }
+
+            .bannertxt h1 {
+                font-size: 5vw;
+            }
+
+            .bannertxt h2 {
+                font-size: 2vw;
+            }
+
+            .rooms h1 {
+                font-size: 5vw;
+            }
+
+            .rooms p {
+                font-size: 2.8vw;
+                margin: 2vw 5vw;
+            }
+
+            .rooms a {
+                font-size: 3.3vw;
+                margin: 10vw 0;
+            }
+
+            .demo {
+                flex-wrap: wrap;
+            }
+
+            .kamra img {
+                width: 80vw;
+                margin: 8vw 0 0vw 0;
+            }
+
+            .kamra h1 {
+                margin: -8vw 0 5vw;
+
+            }
+
+            .kamra a {
+                font-size: 4vw;
+                margin: 0 0 5vw 0;
+            }
+
+            .aboutpc {
+                display: none;
+            }
+
+            .aboutphone {
+                display: block;
+            }
+
+            .about img {
+                width: 97vw;
+               
+            }
+
+            .about {
+                margin: 12vw 0; 
+            }
+
+            .abouttxt {
+                margin: -85vw 0vw 0 0;
+                padding: 15vw 13vw 19vw 13vw;
+            }
+
+            .abouttxt h1 {
+                font-size: 4.5vw;
+
+            }
+
+            .abouttxt h2 {
+                font-size: 2.7vw;
+            }
+            .abouttxt a{
+                font-size: 3vw;
+            }
+
+            .connect {
+            font-size: 7vw;
+            margin: 5vw 0 10vw 0;
+        }
+
+        .contactus {
+            gap: 3vw;
+            margin: 7vw 0;
+        }
+
+        .contactus img {
+            width: 40vw;
+            border: 3px solid white;
+        }
+
+        .contact {
+            font-size: 1vw;
+        }
+
+        .contact label {
+            font-size: 3vw;
+            margin: 1vw 0 0.5vw;
+        }
+
+        .contact input {
+            width: 65%;
+            font-size: 2vw;
+            padding: 0.7vw;
+            margin-bottom: 3vw;
+
+        }
+
+       
+
+        .contact button {
+            font-size: 2.5vw;
+            padding: 0.7vw 1.5vw;
+            margin-top: 1vw;
+
+        }
+
+ 
+
+        .contact p {
+            margin-top: 3vw;
+            font-size: 2.1vw;
+
+        }
+      
+
+        .footer {
+            position: relative;
+            display: flex;
+            margin: 15vw 0 1vw 0;
+            gap: 5vw;
+            padding: 3vw 0 0 0;
+        }
+
+        .footer img {
+            height: 5vw;
+        }
         }
     </style>
 </head>
@@ -327,7 +508,8 @@
     </nav>
     <div class="banner">
 
-        <img src="banner.jpg" alt="">
+        <img src="banner.jpg" alt="" class="pcbanner">
+        <img src="phonebanner.jpg" alt="" class="phonebanner">
         <div class="bannertxt">
             <h1>Welcome to <br> Winterfell Retreat</h1>
             <h2>Your very own home in the mountains.</h2>
@@ -359,14 +541,15 @@
         </div>
     </div>
     <div class="about">
-        <img src="About.avif" alt="">
+        <img src="About.avif" alt="" class="aboutpc">
+        <img src="aboutphone.avif" alt="" class="aboutphone">
         <div class="abouttxt">
             <h1>About Winterfell Retreat</h1>
             <h2>Perched in the serene beauty of Hamta and Sethan, Winterfell Retreat is surrounded by majestic snowy
                 peaks
-                and pristine nature. <br>
+                and pristine nature. <br><br>
                 Whether you seek adventure, stunning views, or a peaceful getaway, our retreat is the perfect Himalayan
-                escape. <br>
+                escape. <br><br>
                 Come experience tranquility like never before and reconnect with nature in its purest form.</h2>
             <a href="">Learn More</a>
         </div>
@@ -394,11 +577,11 @@
         </div>
     </div>
     <div class="footer">
-       <a href=""> <img src="facebook.png" alt=""></a> 
-       <a href=""><img src="instagram.png" alt=""></a> 
-       <a href=""><img src="youtube.png" alt=""></a> 
+        <a href=""> <img src="facebook.png" alt=""></a>
+        <a href=""><img src="instagram.png" alt=""></a>
+        <a href=""><img src="youtube.png" alt=""></a>
     </div>
-    
+
 
     </div>
 </body>
